@@ -6,3 +6,6 @@ COPY ./my-httpd.conf /usr/local/apache2/conf/httpd.conf
 
 # Expose port 9000 to the outside world
 EXPOSE 9000
+
+# Command to run the Apache HTTP Server when the container starts
+CMD ["httpd", "-D", "FOREGROUND"]
