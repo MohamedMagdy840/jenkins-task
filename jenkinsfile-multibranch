@@ -5,13 +5,9 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello Jenkins'
-               
-              
             }
         }
-    }
 
-    stages {
         stage('Build') {
             steps {
                 // Your build steps here
