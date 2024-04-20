@@ -16,7 +16,7 @@ pipeline {
     post {
         failure {
             echo "Pipeline failed, triggering AnotherPipeline..."
-            build job: 'AnotherPipeline', wait: false
+            build job: '1st-pipeline', wait: false
         }
     }
 }
