@@ -13,7 +13,7 @@ pipeline {
                 // Your build steps here
                 sh 'echo "Building..."'
                 // Example: Execute a failing command to simulate failure
-                sh 'exit 1'
+                sh 'exit 1'  //this is mean fail this pipe line
             }
         }
         // Add more stages as needed...
