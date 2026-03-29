@@ -11,7 +11,9 @@ pipeline {
         }
         stage('Hello world') {
             steps {
-                ech 'Hello world'
+                sh'''
+                echo "hello"
+                '''
                
               
             }
