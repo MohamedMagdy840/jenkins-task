@@ -12,7 +12,7 @@ pipeline {
         stage('Hello world') {
             steps {
                 sh'''
-
+                ls
                 chmod +x script.sh
                 ./script.sh
                 
