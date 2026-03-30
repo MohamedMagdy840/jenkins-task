@@ -1,25 +1,28 @@
 pipeline {
     agent any
-
     stages {
-        stage('Hello jenkins') {
+        stage('Checkout') {
             steps {
-                echo 'Hello Jenkins'
-               
-              
+                git 'https://github.com/MohamedMagdy840/jenkins-task.git'  // Replace with your repository URL
             }
         }
-        stage('Hello world') {
+        stage('Run Hello World') {
             steps {
-                sh'''
-                ls
-                chmod +x script.sh
-                ./script.sh
-                
-                '''
-               
-              
+                script {
+                    sh'''
+                    chmod +x hello.sh
+                    ./hello.sh   
+                    '''
+                }
             }
+        }
+    }
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
         }
     }
 }
